@@ -432,7 +432,40 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-/* Justification Card */
+/* Matrix Table Styles */
+.table-responsive {
+    overflow-x: auto;
+}
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.92rem;
+}
+.matrix-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-highlight);
+    font-family: var(--font-heading);
+}
+.matrix-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-card);
+    color: var(--text-main);
+}
+.matrix-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+.check {
+    color: var(--accent-emerald);
+    font-weight: 600;
+}
+.cross {
+    color: var(--text-dim);
+    font-style: italic;
+}
 .margin-top-lg { margin-top: 48px; }
 .justification-card {
     border-color: rgba(99, 102, 241, 0.25);
