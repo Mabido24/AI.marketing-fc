@@ -1,0 +1,30 @@
+# Allow all AI Web Crawlers and Search Engines
+User-agent: *
+Allow: /
+
+# Explicit AI Crawlers Permitted
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://ai.marketing-fc.com/sitemap.xml
