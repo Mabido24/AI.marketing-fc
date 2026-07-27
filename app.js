@@ -24,56 +24,56 @@ document.addEventListener('DOMContentLoaded', () => {
         let recommendedPlan = 2;
         let price = 149;
         let title = "Formule 2 : AI Autopilot";
-        let desc = "Idéale pour booster un site existant avec micro-contenus, FAQ structurées et indexation IA.";
+        let desc = "Idéale pour booster un site existant avec micro-contenus, FAQ structurées, indexation IA et rapport mensuel.";
         let qArticles = `${count} articles + 28 livrables`;
         let qGeo = "Inclus (Optimisation complète)";
-        let engine = "Suivi Mensuel Personnalisé";
+        let engine = "Inclus (Rapport & Suivi Mensuel)";
 
         if (status === 'new') {
-            if (count > 20 || checkWhitelabel.checked) {
+            if (count > 20) {
                 recommendedPlan = 3;
                 price = 349;
                 title = "Formule 3 : Domination 360°";
-                desc = "La solution globale : volume de contenus massif (30+ articles) + dispositif complet d'empreinte IA.";
+                desc = "La solution globale : volume de contenus massif (30+ articles) + dispositif d'empreinte IA + rapport mensuel approfondi.";
                 qArticles = `${count} articles complets / mois`;
                 qGeo = "Inclus (Optimisation Ultime)";
-                engine = "Accompagnement VIP 360°";
+                engine = "Inclus (Rapport VIP & Suivi Mensuel)";
             } else {
                 recommendedPlan = 1;
                 price = 190;
                 title = "Formule 1 : AI Launchpad";
-                desc = "Conçue pour la création de site neuf & alimentation en contenus optimisés SEO et IA.";
+                desc = "Conçue pour la création de site neuf & alimentation en contenus optimisés SEO, IA et rapport de visibilité.";
                 qArticles = `${count} articles stratégiques / mois`;
                 qGeo = "Inclus (Citations IA)";
-                engine = "Suivi Mensuel Personnalisé";
+                engine = "Inclus (Rapport & Suivi Mensuel)";
             }
         } else if (status === 'existing') {
-            if (count > 15 || (checkWhitelabel.checked && checkVideos.checked)) {
+            if (count > 15) {
                 recommendedPlan = 3;
                 price = 349;
                 title = "Formule 3 : Domination 360°";
-                desc = "Optimisation du site existant + Production intensive de contenus d'autorité.";
+                desc = "Optimisation du site existant + Production intensive de contenus d'autorité + rapport d'analyse mensuel.";
                 qArticles = `${count} articles + 28 livrables d'entité`;
                 qGeo = "Indexation IA + FAQ + Audits";
-                engine = "Accompagnement VIP 360°";
+                engine = "Inclus (Rapport VIP & Suivi Mensuel)";
             } else {
                 recommendedPlan = 2;
                 price = 149;
                 title = "Formule 2 : AI Autopilot";
-                desc = "Idéale pour booster un site existant sans modifier son architecture.";
+                desc = "Idéale pour booster un site existant sans modifier son architecture + rapport mensuel.";
                 qArticles = "6 articles + 20 FAQ + 10 Vidéos";
                 qGeo = "Inclus (Optimisation complète)";
-                engine = "Suivi Mensuel Personnalisé";
+                engine = "Inclus (Rapport & Suivi Mensuel)";
             }
         } else {
             // 'both'
             recommendedPlan = 3;
             price = 349;
             title = "Formule 3 : Domination 360°";
-            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre secteur.";
+            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre secteur avec rapport stratégique.";
             qArticles = `${Math.max(count, 30)} articles & livrables`;
             qGeo = "Inclus (Dispositif complet)";
-            engine = "Accompagnement VIP 360°";
+            engine = "Inclus (Rapport VIP & Suivi Mensuel)";
         }
 
         planTitle.textContent = title;
