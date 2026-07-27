@@ -1,4 +1,4 @@
-// Interactive Quota & Plan Calculator Logic
+// Interactive Quota & Plan Calculator Logic — AI.marketing-fc
 document.addEventListener('DOMContentLoaded', () => {
     const siteStatusSelect = document.getElementById('calc-site-status');
     const articlesSlider = document.getElementById('calc-articles');
@@ -23,57 +23,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let recommendedPlan = 2;
         let price = 149;
-        let title = "Offre 2 : AI Autopilot (Mabido Core)";
+        let title = "Offre 2 : AI Autopilot Engine";
         let desc = "Idéal pour booster un site existant avec micro-contenus, FAQ Schema et indexation IA.";
         let qArticles = `${count} blogs / 34 livrables`;
         let qGeo = "Inclus (Hub + llms.txt)";
-        let engine = "Mabido Agency Slot";
+        let engine = "AI.marketing-fc Entity Hub";
 
         if (status === 'new') {
             if (count > 20 || checkWhitelabel.checked) {
                 recommendedPlan = 3;
                 price = 349;
-                title = "Offre 3 : Domination 360° (Combo Hybride)";
-                desc = "Le couteau suisse absolu : volume Blazly (30+ articles) + footprint technique Mabido.";
+                title = "Offre 3 : Domination 360° (Suite Hybride)";
+                desc = "Le couteau suisse absolu : volume de contenu massif (30+ articles) + footprint technique d'entité.";
                 qArticles = `${count} articles complets / mois`;
                 qGeo = "Inclus (Ultra Complete)";
-                engine = "Blazly Tier 4 + Mabido Slot";
+                engine = "AI.marketing-fc 360° Suite";
             } else {
                 recommendedPlan = 1;
                 price = 190;
-                title = "Offre 1 : AI Launchpad (Blazly Core)";
+                title = "Offre 1 : AI Launchpad";
                 desc = "Conçu pour la création de site neuf & alimentation massive en articles SEO/GEO.";
                 qArticles = `${count} articles optimisés / mois`;
-                qGeo = "Suivi Citations IA Blazly";
-                engine = "Blazly Tier 3/4 Engine";
+                qGeo = "Suivi Citations IA Propriétaire";
+                engine = "Moteur Éditorial AI.marketing-fc";
             }
         } else if (status === 'existing') {
             if (count > 15 || (checkWhitelabel.checked && checkVideos.checked)) {
                 recommendedPlan = 3;
                 price = 349;
-                title = "Offre 3 : Domination 360° (Combo Hybride)";
+                title = "Offre 3 : Domination 360° (Suite Hybride)";
                 desc = "Optimisation du site existant + Alimentation massive en articles de blog.";
-                qArticles = `${count} articles + 34 livrables Mabido`;
-                qGeo = "Hub d'Entité + Schema + LLM Audit";
-                engine = "Blazly + Mabido Combined";
+                qArticles = `${count} articles + 34 livrables d'entité`;
+                qGeo = "Hub d'Entité + Schema + Audit IA";
+                engine = "Suite Hybride AI.marketing-fc";
             } else {
                 recommendedPlan = 2;
                 price = 149;
-                title = "Offre 2 : AI Autopilot (Mabido Core)";
+                title = "Offre 2 : AI Autopilot Engine";
                 desc = "Idéal pour booster un site existant sans modifier son architecture.";
                 qArticles = "6 blogs + 20 FAQ + 10 Vidéos";
                 qGeo = "Hub d'Entité + llms.txt";
-                engine = "Mabido Agency Slot";
+                engine = "AI.marketing-fc Entity Hub";
             }
         } else {
             // 'both'
             recommendedPlan = 3;
             price = 349;
-            title = "Offre 3 : Domination 360° (Combo Hybride)";
-            desc = "Puissance maximale sur tous les fronts pour une domination totale de niche.";
+            title = "Offre 3 : Domination 360° (Suite Hybride)";
+            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre niche.";
             qArticles = `${Math.max(count, 30)} articles & livrables`;
-            qGeo = "Hub + Schema + Citations Blazly";
-            engine = "Blazly Tier 4 + Mabido Slot";
+            qGeo = "Hub + Schema + Citations IA";
+            engine = "Suite Hybride AI.marketing-fc";
         }
 
         planTitle.textContent = title;
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Merci ! Votre demande d\'audit GEO & AEO a bien été enregistrée. Notre équipe vous recontactera sous 24h.');
+            alert('Merci ! Votre demande d\'audit GEO & AEO a bien été enregistrée par AI.marketing-fc. Notre équipe vous recontactera sous 24h.');
             contactForm.reset();
         });
     }
