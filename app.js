@@ -23,57 +23,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let recommendedPlan = 2;
         let price = 149;
-        let title = "Offre 2 : AI Autopilot Engine";
-        let desc = "Idéal pour booster un site existant avec micro-contenus, FAQ Schema et indexation IA.";
-        let qArticles = `${count} blogs / 34 livrables`;
-        let qGeo = "Inclus (Hub + llms.txt)";
-        let engine = "AI.marketing-fc Entity Hub";
+        let title = "Formule 2 : AI Autopilot";
+        let desc = "Idéale pour booster un site existant avec micro-contenus, FAQ structurées et indexation IA.";
+        let qArticles = `${count} articles + 28 livrables`;
+        let qGeo = "Inclus (Optimisation complète)";
+        let engine = "Suivi Mensuel Personnalisé";
 
         if (status === 'new') {
             if (count > 20 || checkWhitelabel.checked) {
                 recommendedPlan = 3;
                 price = 349;
-                title = "Offre 3 : Domination 360° (Suite Hybride)";
-                desc = "Le couteau suisse absolu : volume de contenu massif (30+ articles) + footprint technique d'entité.";
+                title = "Formule 3 : Domination 360°";
+                desc = "La solution globale : volume de contenus massif (30+ articles) + dispositif complet d'empreinte IA.";
                 qArticles = `${count} articles complets / mois`;
-                qGeo = "Inclus (Ultra Complete)";
-                engine = "AI.marketing-fc 360° Suite";
+                qGeo = "Inclus (Optimisation Ultime)";
+                engine = "Accompagnement VIP 360°";
             } else {
                 recommendedPlan = 1;
                 price = 190;
-                title = "Offre 1 : AI Launchpad";
-                desc = "Conçu pour la création de site neuf & alimentation massive en articles SEO/GEO.";
-                qArticles = `${count} articles optimisés / mois`;
-                qGeo = "Suivi Citations IA Propriétaire";
-                engine = "Moteur Éditorial AI.marketing-fc";
+                title = "Formule 1 : AI Launchpad";
+                desc = "Conçue pour la création de site neuf & alimentation en contenus optimisés SEO et IA.";
+                qArticles = `${count} articles stratégiques / mois`;
+                qGeo = "Inclus (Citations IA)";
+                engine = "Suivi Mensuel Personnalisé";
             }
         } else if (status === 'existing') {
             if (count > 15 || (checkWhitelabel.checked && checkVideos.checked)) {
                 recommendedPlan = 3;
                 price = 349;
-                title = "Offre 3 : Domination 360° (Suite Hybride)";
-                desc = "Optimisation du site existant + Alimentation massive en articles de blog.";
-                qArticles = `${count} articles + 34 livrables d'entité`;
-                qGeo = "Hub d'Entité + Schema + Audit IA";
-                engine = "Suite Hybride AI.marketing-fc";
+                title = "Formule 3 : Domination 360°";
+                desc = "Optimisation du site existant + Production intensive de contenus d'autorité.";
+                qArticles = `${count} articles + 28 livrables d'entité`;
+                qGeo = "Indexation IA + FAQ + Audits";
+                engine = "Accompagnement VIP 360°";
             } else {
                 recommendedPlan = 2;
                 price = 149;
-                title = "Offre 2 : AI Autopilot Engine";
-                desc = "Idéal pour booster un site existant sans modifier son architecture.";
-                qArticles = "6 blogs + 20 FAQ + 10 Vidéos";
-                qGeo = "Hub d'Entité + llms.txt";
-                engine = "AI.marketing-fc Entity Hub";
+                title = "Formule 2 : AI Autopilot";
+                desc = "Idéale pour booster un site existant sans modifier son architecture.";
+                qArticles = "6 articles + 20 FAQ + 10 Vidéos";
+                qGeo = "Inclus (Optimisation complète)";
+                engine = "Suivi Mensuel Personnalisé";
             }
         } else {
             // 'both'
             recommendedPlan = 3;
             price = 349;
-            title = "Offre 3 : Domination 360° (Suite Hybride)";
-            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre niche.";
+            title = "Formule 3 : Domination 360°";
+            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre secteur.";
             qArticles = `${Math.max(count, 30)} articles & livrables`;
-            qGeo = "Hub + Schema + Citations IA";
-            engine = "Suite Hybride AI.marketing-fc";
+            qGeo = "Inclus (Dispositif complet)";
+            engine = "Accompagnement VIP 360°";
         }
 
         planTitle.textContent = title;
