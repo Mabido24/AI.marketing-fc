@@ -21,64 +21,77 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = parseInt(articlesSlider.value);
         articlesValDisplay.textContent = count;
 
-        let recommendedPlan = 2;
-        let price = 149;
+        let calculatedPrice = 149;
         let title = "Formule 2 : AI Autopilot";
-        let desc = "Idéale pour booster un site existant avec micro-contenus, FAQ structurées, indexation IA et rapport mensuel.";
-        let qArticles = `${count} articles + 28 livrables`;
-        let qGeo = "Inclus (Optimisation complète)";
+        let desc = "Optimisation de votre site existant avec contenus SEO/GEO, FAQ structurées, micro-vidéos et rapport mensuel.";
+        let qArticles = "";
+        let qGeo = "Inclus (Dispositif complet)";
         let engine = "Inclus (Rapport & Suivi Mensuel)";
+        let recommendedPlan = 2;
 
         if (status === 'new') {
-            if (count > 20) {
+            // Base Launchpad = 190€ for 10 articles. Additional articles = +9€/article
+            if (count <= 10) {
+                calculatedPrice = 190;
+            } else {
+                calculatedPrice = 190 + (count - 10) * 9;
+            }
+            
+            if (count >= 25) {
                 recommendedPlan = 3;
-                price = 349;
-                title = "Formule 3 : Domination 360°";
-                desc = "La solution globale : volume de contenus massif (30+ articles) + dispositif d'empreinte IA + rapport mensuel approfondi.";
-                qArticles = `${count} articles complets / mois`;
-                qGeo = "Inclus (Optimisation Ultime)";
-                engine = "Inclus (Rapport VIP & Suivi Mensuel)";
+                title = "Formule 3 : Domination 360° (Sur-Mesure)";
+                desc = "Création du site + Production intensive de contenus d'autorité et dispositif d'empreinte IA complet.";
             } else {
                 recommendedPlan = 1;
-                price = 190;
                 title = "Formule 1 : AI Launchpad";
                 desc = "Conçue pour la création de site neuf & alimentation en contenus optimisés SEO, IA et rapport de visibilité.";
-                qArticles = `${count} articles stratégiques / mois`;
-                qGeo = "Inclus (Citations IA)";
-                engine = "Inclus (Rapport & Suivi Mensuel)";
             }
+
+            qArticles = `${count} articles stratégiques / mois`;
+
         } else if (status === 'existing') {
-            if (count > 15) {
+            // Base Autopilot = 149€ (includes 6 articles + 20 FAQ + 10 videos). Additional articles = +8€/article
+            if (count <= 6) {
+                calculatedPrice = 149;
+            } else if (count <= 15) {
+                calculatedPrice = 149 + (count - 6) * 8;
+            } else if (count <= 30) {
+                calculatedPrice = 221 + (count - 15) * 8.5; // Smooth transition up to ~349€ at 30 articles
+            } else {
+                calculatedPrice = 349 + (count - 30) * 7.5; // Scale beyond 30
+            }
+
+            calculatedPrice = Math.round(calculatedPrice);
+
+            if (count >= 20) {
                 recommendedPlan = 3;
-                price = 349;
                 title = "Formule 3 : Domination 360°";
-                desc = "Optimisation du site existant + Production intensive de contenus d'autorité + rapport d'analyse mensuel.";
-                qArticles = `${count} articles + 28 livrables d'entité`;
-                qGeo = "Indexation IA + FAQ + Audits";
-                engine = "Inclus (Rapport VIP & Suivi Mensuel)";
+                desc = "Production intensive d'articles + 10 micro-vidéos + FAQ Schema + rapport stratégique mensuel.";
             } else {
                 recommendedPlan = 2;
-                price = 149;
-                title = "Formule 2 : AI Autopilot";
-                desc = "Idéale pour booster un site existant sans modifier son architecture + rapport mensuel.";
-                qArticles = "6 articles + 20 FAQ + 10 Vidéos";
-                qGeo = "Inclus (Optimisation complète)";
-                engine = "Inclus (Rapport & Suivi Mensuel)";
+                title = "Formule 2 : AI Autopilot (Évolutif)";
+                desc = "Boost de votre site existant sans refonte : articles sur-mesure, FAQ structurées, micro-vidéos et suivi.";
             }
+
+            const videoText = checkVideos.checked ? " + 10 Vidéos" : "";
+            const faqCount = Math.min(count * 2, 40);
+            qArticles = `${count} articles + ${faqCount} FAQ${videoText}`;
+
         } else {
-            // 'both'
+            // Both / Intensive
+            calculatedPrice = Math.round(249 + (count - 10) * 7.5);
             recommendedPlan = 3;
-            price = 349;
-            title = "Formule 3 : Domination 360°";
-            desc = "Puissance maximale sur tous les fronts pour une domination totale de votre secteur avec rapport stratégique.";
-            qArticles = `${Math.max(count, 30)} articles & livrables`;
-            qGeo = "Inclus (Dispositif complet)";
-            engine = "Inclus (Rapport VIP & Suivi Mensuel)";
+            title = "Formule 3 : Domination 360° (Pro)";
+            desc = "Dispositif omnicanal haute intensité : création/refonte + volume massif d'articles et contenus multimédias.";
+            qArticles = `${count} articles + 40 FAQ + 10 Vidéos`;
         }
+
+        // Adjust optional checkboxes additions
+        if (checkVideos.checked && status === 'new') calculatedPrice += 30;
 
         planTitle.textContent = title;
         planDesc.textContent = desc;
-        planPrice.textContent = price + "€";
+        planPrice.textContent = calculatedPrice + "€";
         quotaArticles.textContent = qArticles;
         quotaGeo.textContent = qGeo;
         quotaEngine.textContent = engine;
