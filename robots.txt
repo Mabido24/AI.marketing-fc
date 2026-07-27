@@ -27,4 +27,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://ai.marketing-fc.com/sitemap.xml
+Sitemap: https://marcheo.com/sitemap.xml

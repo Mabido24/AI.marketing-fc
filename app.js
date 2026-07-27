@@ -1,4 +1,4 @@
-// Interactive Quota & Plan Calculator Logic — AI.marketing-fc
+// Interactive Quota & Plan Calculator Logic — MARCHEO
 document.addEventListener('DOMContentLoaded', () => {
     const siteStatusSelect = document.getElementById('calc-site-status');
     const articlesSlider = document.getElementById('calc-articles');
@@ -22,15 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         articlesValDisplay.textContent = count;
 
         let calculatedPrice = 149;
-        let title = "Formule 2 : AI Autopilot";
+        let title = "Formule 2 : MARCHEO Autopilot";
         let desc = "Optimisation de votre site existant avec contenus SEO/GEO, FAQ structurées, micro-vidéos et rapport mensuel.";
         let qArticles = "";
         let qGeo = "Inclus (Dispositif complet)";
-        let engine = "Inclus (Rapport & Suivi Mensuel)";
+        let engine = "Suivi Mensuel MARCHEO";
         let recommendedPlan = 2;
 
         if (status === 'new') {
-            // Base Launchpad = 190€ for 10 articles. Additional articles = +9€/article
             if (count <= 10) {
                 calculatedPrice = 190;
             } else {
@@ -50,15 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
             qArticles = `${count} articles stratégiques / mois`;
 
         } else if (status === 'existing') {
-            // Base Autopilot = 149€ (includes 6 articles + 20 FAQ + 10 videos). Additional articles = +8€/article
             if (count <= 6) {
                 calculatedPrice = 149;
             } else if (count <= 15) {
                 calculatedPrice = 149 + (count - 6) * 8;
             } else if (count <= 30) {
-                calculatedPrice = 221 + (count - 15) * 8.5; // Smooth transition up to ~349€ at 30 articles
+                calculatedPrice = 221 + (count - 15) * 8.5;
             } else {
-                calculatedPrice = 349 + (count - 30) * 7.5; // Scale beyond 30
+                calculatedPrice = 349 + (count - 30) * 7.5;
             }
 
             calculatedPrice = Math.round(calculatedPrice);
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 desc = "Production intensive d'articles + 10 micro-vidéos + FAQ Schema + rapport stratégique mensuel.";
             } else {
                 recommendedPlan = 2;
-                title = "Formule 2 : AI Autopilot (Évolutif)";
+                title = "Formule 2 : MARCHEO Autopilot";
                 desc = "Boost de votre site existant sans refonte : articles sur-mesure, FAQ structurées, micro-vidéos et suivi.";
             }
 
@@ -78,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             qArticles = `${count} articles + ${faqCount} FAQ${videoText}`;
 
         } else {
-            // Both / Intensive
             calculatedPrice = Math.round(249 + (count - 10) * 7.5);
             recommendedPlan = 3;
             title = "Formule 3 : Domination 360° (Pro)";
@@ -86,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             qArticles = `${count} articles + 40 FAQ + 10 Vidéos`;
         }
 
-        // Adjust optional checkboxes additions
         if (checkVideos.checked && status === 'new') calculatedPrice += 30;
 
         planTitle.textContent = title;
@@ -115,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Merci ! Votre demande d\'audit GEO & AEO a bien été enregistrée par AI.marketing-fc. Notre équipe vous recontactera sous 24h.');
+            alert('Merci ! Votre demande d\'audit GEO & AEO a bien été enregistrée par MARCHEO. Notre équipe vous recontactera sous 24h.');
             contactForm.reset();
         });
     }

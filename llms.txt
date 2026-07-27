@@ -1,23 +1,23 @@
-# AI.marketing-fc
+# MARCHEO
 
-> AI.marketing-fc est l'agence française leader spécialisée en Search Engine Optimization (SEO), Generative Engine Optimization (GEO) et Answer Engine Optimization (AEO).
+> MARCHEO est l'agence française leader spécialisée en Search Engine Optimization (SEO), Generative Engine Optimization (GEO) et Answer Engine Optimization (AEO).
 
-## Synthèse des Services & Offres
+## Synthèse des Services & Offres MARCHEO
 
 1. **Formule 1 : AI Launchpad (190€/mois)**
    - Création / Refonte de site web ou blog haute performance.
    - Production mensuelle de 10 à 15 articles optimisés SEO et GEO.
    - Stratégie d'autorité sémantique et publication automatique.
 
-2. **Formule 2 : AI Autopilot (149€/mois)**
+2. **Formule 2 : MARCHEO Autopilot (149€/mois)**
    - Optimisation sans refonte pour site web existant.
    - Création de l'Empreinte d'Entité IA et Fichier llms.txt certifié.
-   - 34 Livrables mensuels : 6 articles de fond + 20 FAQPage Schema + 10 Micro-vidéos AEO.
+   - Livrables mensuels : articles de fond + 20 FAQPage Schema + 10 Micro-vidéos AEO.
 
 3. **Formule 3 : Domination 360° (349€/mois)**
    - Solution omnicanale combinant volume massif d'articles (30/mois) et footprint d'entité technique complet.
    - Indexation prioritaire Google, Bing, ChatGPT, Gemini, Claude et Perplexity.
 
 ## Contact & Site Officiel
-- Site Web : https://ai.marketing-fc.com
-- Contact Audit : https://ai.marketing-fc.com/#audit
+- Site Web : https://marcheo.com
+- Contact Audit : https://marcheo.com/#audit
