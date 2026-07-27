@@ -516,6 +516,12 @@ h1, h2, h3, h4 {
     font-family: var(--font-sans);
 }
 
+.form-control option {
+    background-color: #111625;
+    color: #ffffff;
+    padding: 10px;
+}
+
 .form-control:focus {
     outline: none;
     border-color: var(--primary);
